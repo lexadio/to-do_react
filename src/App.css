@@ -37,10 +37,82 @@
   }
 }
 
+.input-item {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: 1px solid #a7a7a7;
+}
+
+.input-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
 li {
   list-style-type: none; /* Убираем маркеры */
 }
 
-.Item-ul {
+.input {
+  margin-bottom: 20px;
+}
+
+.item-ul {
   display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-change_active {
+  margin-bottom: 10px;
+}
+
+.item-li {
+  width: 30vw;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #a7a7a7;
+  border-radius: 10px;
+}
+
+.clouse {
+  background-color: #a7a7a7;
+  text-decoration: line-through;
+}
+
+.item-title {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.item-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.item-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.item-btn:hover {
+  opacity: 0.7;
+}
+
+.btn-del {
+  background-color: #ffba73;
+}
+
+.btn-ok {
+  background-color: #64de89;
+}
+
+.btn-change {
+  background-color: #6f83d6;
 }

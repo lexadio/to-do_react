@@ -4,8 +4,12 @@ import './App.css';
 
 function App() {
 
-  const [todo, setTodo] = useState([ // что то вроде локальной базы данных. И вся информация доступна в переменной todo. Settodo - функция, которая будет менять сам to do
-    {
+  let todoItem = '';
+
+  if(localStorage.todo != null) {
+    todoItem = JSON.parse( localStorage.todo );
+  } else {
+    todoItem = [{
       id: 1,
       title: 'Написать ToDo',
       status: true,
@@ -19,8 +23,10 @@ function App() {
       id: 3,
       title: 'Сдать отчет',
       status: false,
-    },
-  ])
+    },]
+  }
+
+  const [todo, setTodo] = useState(todoItem)
 
   return (
     <div className="App">

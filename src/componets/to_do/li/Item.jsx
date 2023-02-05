@@ -7,6 +7,7 @@ function Item ({ todo, setTodo }) {
 
     function deleteItemTodo(id) {
         let newTodo = [...todo].filter(item => item.id != id);
+        localStorage.todo = JSON.stringify(newTodo);
         setTodo(newTodo);
     }
 
@@ -17,6 +18,7 @@ function Item ({ todo, setTodo }) {
             } 
             return item;
         })
+        localStorage.todo = JSON.stringify(newTodo);
         setTodo(newTodo);
     }
 
@@ -32,6 +34,7 @@ function Item ({ todo, setTodo }) {
             }
             return item;
         })
+        localStorage.todo = JSON.stringify(newTodo);
         setTodo(newTodo);
         setEdit(null);
     }
